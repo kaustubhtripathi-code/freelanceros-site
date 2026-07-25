@@ -6,7 +6,7 @@
 <title>FreelancerOS — Own your workflow</title>
 <meta name="description" content="Time tracking, invoicing, CRM, proposals, contracts, expenses, tasks and scheduling in one self-hostable app. Replace $80/month of SaaS with one $12 tool.">
 <style>
-  :root{--brand:#5c7cfa;--brand-dark:#4263eb;--ink:#e7ecf5;--muted:#8b97ad;--bg:#070b14;--card:rgba(255,255,255,.04);--line:rgba(255,255,255,.09)}
+  :root{color-scheme:dark;--brand:#5c7cfa;--brand-dark:#4263eb;--ink:#e7ecf5;--muted:#8b97ad;--bg:#070b14;--card:rgba(255,255,255,.04);--line:rgba(255,255,255,.09)}
   *{margin:0;padding:0;box-sizing:border-box}
   body{font-family:"Segoe UI",Inter,system-ui,sans-serif;background:radial-gradient(1200px 700px at 50% -5%,#1a2540 0%,#0b1220 55%,var(--bg) 100%);color:var(--ink);line-height:1.6}
   .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
@@ -78,6 +78,33 @@
   .lightbox img{max-width:96vw;max-height:92vh;border-radius:10px;border:1px solid var(--line);box-shadow:0 30px 100px rgba(0,0,0,.7)}
   .lightbox .x{position:fixed;top:18px;right:26px;color:#cbd4e3;font-size:34px;line-height:1;background:none;border:0;cursor:pointer}
   .lightbox .x:hover{color:#fff}
+
+  /* ---- responsive ---- */
+  @media(max-width:720px){
+    .wrap{padding:0 18px}
+    header{gap:12px}
+    .logo{font-size:17px}
+    .logo .bolt{width:30px;height:30px}
+    .btn{padding:11px 15px;font-size:14px}
+    .hero{padding:56px 0 44px}
+    section{padding:52px 0}
+    .frame{margin-top:32px;border-radius:11px}
+    /* stack the calculator total so the number never collides with the saving */
+    .total{flex-direction:column;align-items:flex-start;gap:8px}
+    .total strong{font-size:26px}
+    /* long tool names get their own line above the price */
+    .calc label{flex-wrap:wrap;padding:12px 14px}
+    .calc .tool{flex:1 1 auto;min-width:0;font-size:14.5px}
+    .calc input{width:22px;height:22px;flex:none}
+    .calc label span.price{flex:none;font-size:14px}
+    .shots{grid-template-columns:1fr}
+    .videowrap{border-radius:12px}
+  }
+  @media(max-width:400px){
+    /* two ghost buttons + wordmark stop fitting one row here */
+    header{flex-wrap:wrap;justify-content:center;text-align:center}
+    header nav{width:100%;justify-content:center}
+  }
 </style>
 </head>
 <body>
@@ -189,17 +216,17 @@
     <div class="grid plans">
       <div class="card plan"><h3>Free</h3><div class="price">$0</div>
         <ul><li>Time Tracker</li><li>Client CRM</li><li>Task Board</li><li>Self-host or hosted</li></ul>
-        <a class="btn btn-ghost" href="#">Start free</a></div>
+        <a class="btn btn-ghost" href="mailto:kaustubh.trt@gmail.com?subject=FreelancerOS%20—%20Free%20plan">Start free</a></div>
       <div class="card plan featured"><span class="tag">MOST POPULAR</span><h3>Pro</h3><div class="price">$12<small>/mo · $108/yr</small></div>
         <ul><li>All 11 modules</li><li>Command Center AI chief of staff</li><li>Recurring invoices &amp; PDFs</li><li>Public booking pages</li><li>AI drafting &amp; voice agent</li><li>Revenue dashboards</li></ul>
-        <a class="btn btn-primary" href="#">Go Pro</a></div>
+        <a class="btn btn-primary" href="mailto:kaustubh.trt@gmail.com?subject=FreelancerOS%20—%20Pro%20plan">Go Pro</a></div>
       <div class="card plan"><h3>Studio</h3><div class="price">$29<small>/mo · 5 seats</small></div>
         <ul><li>Everything in Pro</li><li>Shared clients &amp; pipeline</li><li>Priority support</li></ul>
-        <a class="btn btn-ghost" href="#">Contact</a></div>
+        <a class="btn btn-ghost" href="mailto:kaustubh.trt@gmail.com?subject=FreelancerOS%20—%20Studio%20plan">Contact</a></div>
     </div>
   </section>
 
-  <footer>FreelancerOS — Own your workflow. · Self-hosted &amp; open · <a href="#pricing">Pricing</a></footer>
+  <footer>FreelancerOS — Own your workflow. · Self-hosted &amp; open · <a href="#pricing">Pricing</a> · <a href="mailto:kaustubh.trt@gmail.com">kaustubh.trt@gmail.com</a><br><a href="https://kaustubhtripathi-code.github.io/everfold-site/" style="color:var(--muted)">An Everfold Labs product</a></footer>
 </div>
 
 <div class="lightbox" id="lightbox"><button class="x" aria-label="Close">&times;</button><img alt="Expanded screenshot"></div>
