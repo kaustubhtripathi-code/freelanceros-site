@@ -1,7 +1,7 @@
 # HANDOVER — freelanceros-site
 
-Marketing site for **FreelancerOS** (the suite at `OneDrive\Desktop\freelanceros` — read its
-CLAUDE.md, and `C:\dev\freelancer-suite\HANDOVER.md` for the other instance). Self-contained
+Marketing site for **FreelancerOS** (canonical product: the `freelancer-suite` repo — read its
+HANDOVER.md; the older `freelanceros` top-level app is a frozen prototype). Self-contained
 `index.html` + `promo.mp4`, click-to-enlarge screenshot lightbox.
 
 - Repo: `kaustubhtripathi-code/freelanceros-site` · GitHub Pages
